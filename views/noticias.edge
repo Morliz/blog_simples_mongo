@@ -1,0 +1,28 @@
+@layout('layouts.app')
+
+@section('content')
+<!-- Page Content -->
+<div class="container">
+
+            <div class="row">
+
+                 <!-- Blog Post -->
+                <div class="card mb-4">
+                        @each(post in posts)
+                            
+                            <div class="card-body">
+                                <h2 class="card-title">{{ post.title }}</h2> 
+                                <p> {{ post.author }} </p>
+                                <a href="/noticia/{{ post._id }}" class="btn btn-primary">Read More &rarr;</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                                    {{ post.createdAt }}
+                            </div>
+
+                        @endeach
+                </div>
+            </div>
+            <!--/.row -->
+</div>
+<!-- /.container -->
+@endsection

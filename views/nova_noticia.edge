@@ -1,0 +1,56 @@
+@layout('layouts.app')
+
+@section('content')
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Nova Noticia</h2>
+        </div>
+    </div>
+
+    <div class="col-md-8 offset-md-2">
+        <form action="/noticias/salvas" method="POST" enctype="multipart/form-data">
+
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Title</label>
+                        <input type="text" name="title" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Autor (a):</label>
+                            <input type="text" name="author" class="form-control" />
+                        </div>
+                    </div>
+            
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Descrição</label>
+                        <input type="text" name="description" class="form-control"/>
+                    </div>
+                </div>
+            
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Conteúdo</label>
+                        <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Imagem</label>
+                        <input type="file" class="form-control-file" name="image">
+                    </div>
+                </div>
+            
+            <div class="form-group text-center">
+                <button class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection

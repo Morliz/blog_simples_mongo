@@ -1,0 +1,24 @@
+@layout('layouts.app')
+
+@section('content')
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+            <!-- Blog Post -->
+            <div class="card mb-4">
+            <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Title: {{ post.title }}</h2>
+                    <p class="card-text">Description: {{ post.description }}</p>
+                    <p class="card-text">Author: {{ post.author }}</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                        Date: {{ post.createdAt.toDateString() }}
+                </div>
+            </div>
+    </div>
+</div>
+<!-- /.container -->
+@endsection
